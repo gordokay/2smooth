@@ -15,9 +15,24 @@ body {
   color: white;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+section .content {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  width: 60%;
+}
+
 a {
   text-decoration: none;
   color: white;
+}
+
+li {
+  list-style: none;
 }
 
 /* header */
@@ -112,17 +127,12 @@ h1 {
 }
 
 #about .content {
-  width: 60%;
-  margin-top: 6em;
-  margin-bottom: 2em;
   display: grid;
   grid-template-rows: repeat(3, auto);
   row-gap: 1em;
 }
 
 #about h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
   justify-self: start;
 }
 
@@ -157,4 +167,44 @@ h1 {
   margin-top: 1em;
   width: 300px;
   height: 300px;
+  border: 2px solid white;
+}
+
+/* events */
+
+#events {
+  background-image: url(images/keyboard.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+#events h2 {
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+#events ul {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.event {
+  font-size: 1.25em;
+  font-weight: 700;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.5em;
+}
+
+.event div:last-of-type {
+  font-weight: 300;
+  text-align: right;
+}
+
+.event:last-of-type {
+  border-bottom: none;
 }

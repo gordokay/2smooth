@@ -102,6 +102,7 @@ nav ul li a.active {
 h1 {
   font-size: 6rem;
   font-weight: 700;
+  color: var(--primary);
 }
 
 .shortcuts {
@@ -111,8 +112,8 @@ h1 {
 }
 
 .shortcut {
-  font-weight: 700;
   border: 2px solid white;
+  font-weight: 700;
   width: 12em;
   height: 4em;
   border-radius: 2em;
@@ -170,18 +171,17 @@ h1 {
   padding-top: 1em;
   font-size: 1.25rem;
   font-weight: 700;
-  border-bottom: 1px solid var(--primary);
   color: var(--primary);
 }
 
 .bio .caption {
   font-size: 0.8rem;
+  margin-bottom: 1em;
 }
 
 .bio img {
   margin-top: 1em;
   width: 300px;
-  height: 300px;
 }
 
 /* events */
@@ -221,4 +221,27 @@ h1 {
 
 .event:last-of-type {
   border-bottom: none;
+}
+
+/* contact */
+#contact {
+  background-image: url(images/haze-mic.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+#contact .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#contact h2 {
+  grid-column: span 2;
+  margin-bottom: 0.5rem;
+}
+
+#contact .content div {
+  display: flex;
+  gap: 1em;
 }

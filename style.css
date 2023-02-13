@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
 
 :root {
-  --primary: #FF9977;
-  --dark: #000428;
+  --primary: #FFD336;
+  --dark: #0B0B0B;
+  --light: #F9F9F9;
 }
 
 *,
@@ -17,7 +18,7 @@
 body {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 300;
-  color: white;
+  color: var(--light);
 }
 
 h2 {
@@ -34,7 +35,7 @@ section .content {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--light);
 }
 
 li {
@@ -44,7 +45,7 @@ li {
 /* header */
 
 header {
-  background-image: url(images/2smooth.jpg);
+  background-image: url(images/microphone.jpg);
   background-size: cover;
   height: 100vh;
   display: grid;
@@ -135,8 +136,7 @@ h1 {
 /* about */
 
 #about {
-  background-image: url(images/shiny-mic.jpg);
-  background-size: cover;
+  background-color: var(--dark);
   display: flex;
   justify-content: center;
 }
@@ -187,7 +187,7 @@ h1 {
 /* events */
 
 #events {
-  background-image: url(images/blue-mic.jpg);
+  background-image: url(images/keyboard.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -208,7 +208,7 @@ h1 {
 .event {
   font-size: 1.25em;
   font-weight: 700;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--primary);
   display: flex;
   justify-content: space-between;
   padding-block: 0.5em;
@@ -225,8 +225,7 @@ h1 {
 
 /* contact */
 #contact {
-  background-image: url(images/haze-mic.jpg);
-  background-size: cover;
+  background-color: var(--dark);
   display: flex;
   justify-content: center;
 }

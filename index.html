@@ -14,21 +14,29 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+      <ul class="navigation">
+        <li>
+          <a href="#home" class="navigation__link navigation__link_active"
+            >Home</a
+          >
+        </li>
+        <li><a href="#about" class="navigation__link">About</a></li>
+        <li><a href="#events" class="navigation__link">Events</a></li>
+        <li><a href="#gallery" class="navigation__link">Gallery</a></li>
       </ul>
     </nav>
     <section id="home">
-      <h1>2Smooth</h1>
-      <p>
-        Local variety band with decades of combined experience and a passion for
-        music
-      </p>
-      <a href="#events" class="shortcut">Upcoming events</a>
-      <a href="#gallery" class="shortcut shortcut_secondary">Gallery</a>
+      <div>
+        <h1>2Smooth</h1>
+        <p>
+          Local variety band with decades of combined experience and a passion
+          for music
+        </p>
+        <div>
+          <a href="#events" class="shortcut">Upcoming events</a>
+          <a href="#contact" class="shortcut shortcut_secondary">Contact us</a>
+        </div>
+      </div>
       <img
         src="images/keyboard.jpg"
         alt="A keyboard being played by a musician"
@@ -38,35 +46,37 @@
       <h2>About the band</h2>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt officia
-        nemo quibusdam! Quibusdam repudiandae rerum.Sunt officia nemo quibusdam!
-        Quibusdam repudiandae rerum.
+        nemo quibusdam! Quibusdam repudiandae rerum. Sunt officia nemo
+        quibusdam! Quibusdam repudiandae rerum.
       </p>
-      <article class="card">
-        <h3 class="card__title">Isabella Gordon</h3>
-        <p class="card__caption">Singer</p>
-        <img
-          class="card__image"
-          src="images/isabella.png"
-          alt="Isabella Gordon"
-        />
-        <p class="card__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          dignissimos alias velit officiis non qui soluta distinctio
-          exercitationem asperiores, itaque incidunt debitis quas, rerum ipsam
-          suscipit. Perferendis omnis velit ipsa!
-        </p>
-      </article>
-      <article class="card">
-        <h3 class="card__title">Ted Ash</h3>
-        <p class="card__caption">Keyboardist</p>
-        <img class="card__image" src="images/ted.png" alt="Ted Ash" />
-        <p class="card__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-          dignissimos alias velit officiis non qui soluta distinctio
-          exercitationem asperiores, itaque incidunt debitis quas, rerum ipsam
-          suscipit. Perferendis omnis velit ipsa!
-        </p>
-      </article>
+      <div>
+        <article class="card">
+          <h3 class="card__title">Isabella Gordon</h3>
+          <p class="card__caption">Singer</p>
+          <img
+            class="card__image"
+            src="images/isabella.png"
+            alt="Isabella Gordon"
+          />
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+            dignissimos alias velit officiis non qui soluta distinctio
+            exercitationem asperiores, itaque incidunt debitis quas, rerum ipsam
+            suscipit. Perferendis omnis velit ipsa!
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Ted Ash</h3>
+          <p class="card__caption">Keyboardist</p>
+          <img class="card__image" src="images/ted.png" alt="Ted Ash" />
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+            dignissimos alias velit officiis non qui soluta distinctio
+            exercitationem asperiores, itaque incidunt debitis quas, rerum ipsam
+            suscipit. Perferendis omnis velit ipsa!
+          </p>
+        </article>
+      </div>
     </section>
     <section id="events">
       <h2>Upcoming events</h2>
@@ -117,17 +127,20 @@
     </section>
     <section id="gallery">
       <img
-        src="images/microphone"
+        src="images/microphone.jpg"
         alt="A microphone on a dark hazy background"
       />
     </section>
-    <footer>
+    <footer id="contact">
       <p>For bookings, questions, or comments</p>
-      <h2>Contact us</h2>
-      <p>
-        <span class="material-symbols-outlined">mail</span>2smoothband@gmail.com
-      </p>
-      <p><span class="material-symbols-outlined">phone</span>000.123.4567</p>
+      <div>
+        <h2>Contact us</h2>
+        <p>
+          <span class="material-symbols-outlined">mail</span
+          >2smoothband@gmail.com
+        </p>
+        <p><span class="material-symbols-outlined">phone</span>000.123.4567</p>
+      </div>
     </footer>
   </body>
 </html>

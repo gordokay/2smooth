@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 
 :root {
-  --primary: #FFD336;
-  --dark: #0B0B0B;
-  --light: #F9F9F9;
+  --dark: #0b0b0b;
+  --mid: #fb59e1;
+  --light: #f9f9f9;
 }
 
 *,
@@ -15,273 +15,163 @@
   font: inherit;
 }
 
+.material-symbols-outlined {
+  color: var(--dark);
+}
+
 body {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 300;
-  color: var(--light);
-  overflow-x: hidden;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-section .content {
-  padding-top: 6em;
-  padding-bottom: 6em;
-  width: 60%;
-}
-
-section {
-  border-bottom: 4px solid var(--primary);
-}
-
-a {
-  text-decoration: none;
-  color: var(--light);
-}
-
-li {
-  list-style: none;
-}
-
-/* header */
-
-header {
-  background-image: url(images/microphone.jpg);
-  background-size: cover;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  justify-content: end;
-  align-items: center;
-  text-align: right;
-  border-bottom: 4px solid var(--primary);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--dark);
+  background-color: var(--light);
+  margin-inline: 12rem;
 }
 
 nav {
+  width: 100vw;
   position: fixed;
-  top: 2rem;
-  left: 2rem;
+  top: 0;
+  left: 0;
+  background-color: var(--light);
 }
 
-nav ul {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 1rem;
-}
-
-nav ul li {
-  width: fit-content;
+.navigation {
   list-style: none;
-  padding-bottom: 0.25em;
-  border-bottom: 1px solid transparent;
-  transition: all 100ms ease-in-out;
-}
-
-nav ul li:hover {
-  border-bottom: 1px solid var(--primary);
-  transform: translateY(-0.25em);
-}
-
-nav ul li a.active {
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.hero,
-.shortcuts {
-  margin-right: 6rem;
-}
-
-.hero {
-  align-self: end;
-  font-size: 1.5rem;
-}
-
-h1 {
-  font-size: 6rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.shortcuts {
-  margin-top: 4em;
   display: flex;
-  gap: 2em;
+  padding-block: 1.25rem;
+  justify-content: center;
+  gap: 3rem;
+  border-bottom: 1px solid var(--dark);
 }
 
-.shortcut {
-  border: 4px solid var(--primary);
-  font-weight: 700;
-  width: 12em;
-  height: 4em;
+.navigation__link {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.navigation__link_active {
+  font-weight: 800;
+}
+
+img {
+  width: 428px;
+  height: auto;
+}
+
+#home {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 100ms ease-in-out;
+  gap: 1rem;
 }
 
-.shortcut:hover {
-  backdrop-filter: blur(1rem);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.shortcut a {
-  padding: 1em;
-  color: var(--primary);
-}
-
-/* about */
-
-#about {
-  background-color: var(--dark);
-  display: flex;
-  justify-content: center;
-}
-
-#about .content {
-  width: 70%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-#about h2 {
-  grid-column: span 2;
-}
-
-#about .content > p {
- grid-column: span 2;
- width: 60%;
-}
-
-.bio {
-  display: grid;
-  grid-column: 1fr 1fr;
-  grid-column: span 2;
-}
-
-.bio h3 {
-  padding-top: 1em;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--dark);
-}
-
-.bio > div {
-  position: relative;
-  z-index: 1;
-  grid-area: 1 / 2 / 2 / 3;
-  color: var(--dark);
-  align-self: center;
-  width: 80%;
-  font-weight: 500;
-}
-
-.bio .caption {
-  font-size: 0.8rem;
-  margin-bottom: 1em;
-}
-
-.bio .graphic {
-  height: 400px;
-  width: 100%;
-  background-color: var(--primary);
-  grid-area: 1 / 1 / 2 / 3;
-  align-self: end;
-}
-
-.bio img {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  grid-area: 1 / 1;
-  z-index: 1;
-}
-
-.bio:last-of-type {
-  position: relative;
-  z-index: 10;
-  margin-top: -2rem;
-}
-
-.bio:last-of-type h3 {
-  color: var(--primary);
-}
-
-.bio:last-of-type img {
-  grid-area: 1 / 2;
-}
-
-.bio:last-of-type > div {
-  color: var(--light);
-  grid-area: 1;
-}
-
-.bio:last-of-type .graphic {
-  grid-area: 1 / 2;
-  transform: translateX(25%) scaleX(150%);
-}
-/* events */
-
-#events {
-  background-image: url(images/keyboard.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-}
-
-#events h2 {
-  text-align: right;
-  margin-bottom: 1em;
-}
-
-#events ul {
-  width: 70%;
-  margin: 0 auto;
+#home > div {
   display: flex;
   flex-direction: column;
 }
 
-.event {
-  font-size: 1.25em;
-  font-weight: 700;
-  border-bottom: 1px solid var(--primary);
-  display: flex;
-  justify-content: space-between;
-  padding-block: 0.5em;
+#home img {
+  height: 70%;
+  width: auto;
 }
 
-.event div:last-of-type {
-  font-weight: 300;
-  text-align: right;
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
 }
 
-.event:last-of-type {
-  border-bottom: none;
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
-/* contact */
-#contact {
-  background-color: var(--dark);
-  display: flex;
-  justify-content: center;
+p {
+  line-height: 1.75rem;
 }
 
-#contact .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.shortcut {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  color: var(--dark);
+  background-color: var(--mid);
+  padding: 1.25rem;
+  border-radius: 4rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
 }
 
-#contact h2 {
-  grid-column: span 2;
+.shortcut_secondary {
+  font-weight: 400;
+  background-color: transparent;
+  border: 1px solid var(--dark);
+}
+
+#about > h2 {
   margin-bottom: 0.5rem;
 }
 
-#contact .content div {
+#about > p {
+  width: 50%;
+  margin-bottom: 1.5rem;
+}
+
+#about > div {
   display: flex;
-  gap: 1em;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid var(--dark);
+  padding: 1rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.card__caption {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.card__image {
+  width: 300px;
+  height: auto;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: var(--light);
+  border-top: 1px solid var(--dark);
+  padding: 2rem 12rem 3rem 12rem;
+}
+
+footer > p {
+  font-size: 0.875rem;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > div > p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
